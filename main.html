@@ -8,9 +8,20 @@
 
 <body>	
 	<script>
-		function secondHighest(arr) {
-			//Write your code here
-			
+		function secondHighest(nums){
+		
+		    if(nums.length<2){
+		        return -Infinity;
+		    }
+		
+		    nums.sort((a,b)=>b-a);
+		    
+		    let highest=nums[0];
+		    for(let i in nums){
+		        if(nums[i]<highest) return nums[i];
+		    }
+		    return -Infinity;
+		
 		}
 
 		function Main() {
